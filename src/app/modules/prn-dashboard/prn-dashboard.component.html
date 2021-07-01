@@ -1,0 +1,38 @@
+<br>
+
+<h3>Recent Complaints</h3>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="100">
+        <div class="mat-elevation-z8">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Sr. No.</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let complaint of complaints;let i = index;">
+                        <td>{{i+1}}</td>
+                        <td>{{complaint.title}}</td>
+                        <td>{{complaint.description}}</td>
+                        <td ng-class='{red : complaint.status=="Pending"}'>
+                            <span>{{complaint.status}}</span>
+
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+<br>
+<br>

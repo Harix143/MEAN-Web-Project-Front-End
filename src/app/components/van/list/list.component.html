@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<div class="card">
+    <div class="card-body">
+        <h3 class='card-title'>Vans</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Sr. No.</th>
+                    <th scope="col">Van Number</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let Van of vans;let i = index'>
+                    <td>{{i+1}}</td>
+                    <td>{{Van?.vanNumber}}</td>
+                    <td>{{Van?.vanModel}}</td>
+                    <td> <button type="button" class="btn btn-primary btn-sm"
+                            style="margin-right: 7px; padding-left: 13px; padding-right: 13px;"
+                            (click)="doView(Van)">View</button>
+                        <button type="button" class="btn btn-secondary btn-sm"
+                            style="margin-right: 7px; padding-left: 13px; padding-right: 13px;"
+                            (click)="doUpdate(Van)">Edit</button>
+                        <button type="button" class="btn btn-warning btn-sm" style="margin-right: 7px; "
+                            (click)="getAvailableDrivers(Van)">Assign</button>
+                        <button type="button" class="btn btn-danger btn-sm" style="margin-right: 7px;"
+                            (click)="doDelete(Van)">Delete</button>
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- (click)="doView(Van)" -->
+<!-- Modal -->

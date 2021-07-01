@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light" style=" background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="student/van">My Van</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">New</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-success" type="submit" (click)="newRoute($event)">Add New Route</button>
+            </form> -->
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<form>
+
+    <div class="mb-3">
+        <label for="vanNumber" class="form-label">Van Number</label>
+        <input placeholder="Currently, there is no Assigned Van" type="text" class="form-control" name="vannumber"
+            [(ngModel)]='van.vanNumber' readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="VanModel" class="form-label">Van Model</label>
+        <input placeholder="Currently, there is no Assigned Van" type="text" class="form-control" name="vanModel"
+            [(ngModel)]='van.vanModel' readonly>
+    </div>
+    <div class="mb-3">
+        <label for="SittingCap" class="form-label">Sitting Capacity</label>
+        <input placeholder="Currently, there is no Assigned Van" type="number" class="form-control"
+            name="sittingCapacity" [(ngModel)]='van.sittingCapacity' readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="airCond" class="form-label">Air Conditioned or Not?</label>
+        <input placeholder="Currently, there is no Assigned Van" type="text" class="form-control" name="air_condition"
+            [(ngModel)]='airCond' readonly>
+    </div>
+</form>

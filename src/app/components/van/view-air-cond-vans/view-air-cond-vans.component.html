@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<div class="card">
+    <div class="card-body">
+        <h3 class='card-title'>Air Conditioned Vans</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Sr. No.</th>
+                    <th scope="col">Van Number</th>
+                    <th scope="col">Model</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let Van of airCondVans; let i = index'>
+                    <td>{{i+1}}</td>
+                    <td>{{Van?.vanNumber}}</td>
+                    <td>{{Van?.vanModel}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light" style=" background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/complaint">My Complaints</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">New</a>
+                </li>
+            </ul> -->
+            <form class="d-flex">
+                <button class="btn btn-success" type="submit" (click)="newComplaint($event)">File New Complaint</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<form (ngSubmit)="viewComplaint()">
+    <!-- <div class="mb-3">
+        <label for="ID" class="form-label">ID</label>
+        <input type="text" class="form-control" name="_id" [(ngModel)]="vans._id" disabled>
+    </div> -->
+    <div class="mb-3">
+        <label for="title" class="form-label">Complaint Title</label>
+        <input type="text" class="form-control" name="title" [(ngModel)]='complaints.title' readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Complaint Description</label>
+        <input type="text" class="form-control" name="description" [(ngModel)]='complaints.description' readonly>
+    </div>
+    <div class="mb-3">
+        <label for="Feedback" class="form-label">Complaint Feedback</label>
+        <input type="text" class="form-control" name="Feedback" [(ngModel)]='complaints.Feedback' readonly>
+    </div>
+    <div class="mb-3">
+        <label for="airCond" class="form-label">Complaint Status</label>
+        <select class="form-select" name="air_condition" [(ngModel)]="complaints.status" disabled>
+            <option value='Pending' selected>Pending</option>
+            <option value='Rejected'>Rejected</option>
+            <option value='Resolved'>Resolved</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg">Done</button>
+</form>

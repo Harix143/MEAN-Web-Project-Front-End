@@ -1,0 +1,55 @@
+<mat-nav-list class="side-contents">
+    <div class="profile-card mt-3">
+        <img src="./assets/parent.png" alt="parent img" />
+        <div class="header">
+            <h2 class="mt-2">{{name}}</h2>
+            <h4>{{email}}</h4>
+        </div>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+
+    <h2 matSubheader class="matSubheader">Home</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="dashboard" id="dashboard"
+        (click)="addClass($event)">
+        <mat-icon>dashboard</mat-icon>
+        Dashboard
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/vans" (click)="removeClass($event)">
+        <mat-icon>people</mat-icon>
+        Childs
+    </a>
+
+
+
+    <mat-divider class="divider other-dividers"></mat-divider>
+
+    <h2 matSubheader class="matSubheader">others</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts" (click)="removeClass($event)">
+        <mat-icon>person</mat-icon>
+        Driver
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="complaint" (click)="removeClass($event)">
+        <mat-icon>sentiment_dissatisfied</mat-icon>
+        Complaints
+    </a>
+    <!-- <mat-divider></mat-divider>
+
+    <h2 matSubheader>Driver</h2> -->
+
+    <!-- <mat-divider></mat-divider>
+
+    <h2 matSubheader>Parent</h2> -->
+
+
+    <mat-divider class="divider other-dividers"></mat-divider>
+    <!-- 
+    <h2 matSubheader class="matSubheader">Others</h2>
+
+   
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/fees" (click)="removeClass($event)">
+        <mat-icon>attach_money</mat-icon>
+        Fees
+    </a> -->
+</mat-nav-list>

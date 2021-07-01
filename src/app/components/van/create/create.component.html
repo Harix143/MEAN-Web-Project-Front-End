@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<form (ngSubmit)="createVan()">
+    <!-- <div class="mb-3">
+        <label for="ID" class="form-label">ID</label>
+        <input type="text" class="form-control" name="_id" [(ngModel)]="vans._id" disabled>
+    </div> -->
+    <div class="mb-3">
+        <label for="vanNumber" class="form-label">Van Number</label>
+        <input type="text" class="form-control" name="vanNumber" [(ngModel)]='vans.vanNumber' required>
+    </div>
+
+    <div class="mb-3">
+        <label for="VanModel" class="form-label">Van Model</label>
+        <input type="text" class="form-control" name="vanModel" [(ngModel)]='vans.vanModel' required>
+    </div>
+    <div class="mb-3">
+        <label for="SittingCap" class="form-label">Sitting Capacity</label>
+        <input type="number" class="form-control" name="sittingCapacity" [(ngModel)]='vans.sittingCapacity' required>
+    </div>
+
+    <div class="mb-3">
+        <label for="airCond" class="form-label">Air Conditioned or Not?</label>
+        <select class="form-select" name="air_condition" [(ngModel)]="vans.air_condition" required>
+            <option value='true' selected>True</option>
+            <option value='false'>False</option>
+        </select>
+    </div>
+    <!-- //[(ngModel)]='vans.airCond'  [(ngModel)]='vans.sittingCap' [(ngModel)]='vans.vanModel' [(ngModel)]='vans._id'[(ngModel)]='vans.vanNumber'-->
+    <button type="submit" class="btn btn-primary btn-lg">Save</button>
+</form>

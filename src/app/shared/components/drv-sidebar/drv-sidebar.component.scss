@@ -1,0 +1,45 @@
+:host {
+  .mat-icon {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  .profile-card {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    // margin: auto;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  .side-contents {
+    background: #1d2231;
+    color: #fff;
+    overflow-y: auto;
+    transition: width 500ms;
+  }
+  .divider {
+    background-color: gray;
+    width: 80%;
+    margin-left: 28px;
+  }
+  .matSubheader {
+    color: gray;
+  }
+  .mat-list-item:hover {
+    background-color: #010922;
+    color: #fff;
+  }
+  .mat-list-item {
+    color: #8390a2;
+  }
+  .other-dividers {
+    margin-top: 12px;
+  }
+  .list-item-active {
+    background-color: #010922;
+    color: #fff;
+  }
+}

@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<div class="card">
+    <div class="card-body">
+        <h3 class='card-title'>Assign Driver</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Sr. No.</th>
+                    <th scope="col">Driver</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let driver of drivers;let i = index'>
+                    <td>{{i+1}}</td>
+                    <td>{{driver?.fullname}}</td>
+                    <td> <button type="button" class="btn btn-primary btn-sm"
+                            style="margin-right: 7px; padding-left: 13px; padding-right: 13px;"
+                            (click)="assignVan(driver)">Assign</button>
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

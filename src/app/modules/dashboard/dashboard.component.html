@@ -1,0 +1,175 @@
+<div>
+    <div class="stats-heading">
+        <h1 class="stats">Overall Statistics</h1>
+    </div>
+    <br>
+
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+        <mat-card fxFlex="25">
+            <app-widget-card label="Vans" total="20" percentage="50" [data]="cards"></app-widget-card>
+        </mat-card>
+        <mat-card fxFlex="25">
+            <app-widget-card label="Students" total="150" percentage="40" [data]="cards"></app-widget-card>
+        </mat-card>
+        <mat-card fxFlex="25">
+            <app-widget-card label="Drivers" total="21" percentage="30" [data]="cards"></app-widget-card>
+        </mat-card>
+        <mat-card fxFlex="25">
+            <app-widget-card label="Routes" total="10" percentage="20" [data]="cards"></app-widget-card>
+        </mat-card>
+    </div>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div class="main">
+    <p>.</p>
+    <div class="heading">
+        <h1 class="caption">Top Performing Drivers</h1>
+        <div class="body">
+            <div class="container">
+                <h1></h1>
+                <div class="card">
+                    <div class="circle">
+                        <h2>01</h2>
+                    </div>
+                    <div class="content">
+                        <h1>Amjad Ali</h1>
+                        <p>Amjad Ali is currently serving 50 Students.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="circle">
+                        <h2>02</h2>
+                    </div>
+                    <div class="content">
+                        <h1>Qasim Ali</h1>
+                        <p>Amjad Ali is currently serving 35 Students.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="circle">
+                        <h2>03</h2>
+                    </div>
+                    <div class="content">
+                        <h1>Waqas Anwar</h1>
+                        <p>Amjad Ali is currently serving 20 Students.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br />
+<mat-divider></mat-divider>
+<br />
+
+<h3 class="stats">Recent Complaints</h3>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="100">
+        <div class="mat-elevation-z8">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="background-color: rgb(13, 13, 65); color:#fff">
+                        <th scope="col">Sr. No.</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let complaint of complaints;let i = index;">
+                        <td>{{i+1}}</td>
+                        <td>{{complaint.title}}</td>
+                        <td>{{complaint.description}}</td>
+                        <td>
+                            <span *ngIf="complaint.status==='Pending'" [ngStyle]="{color: '#ddbe0b'}">
+                                {{complaint.status}}
+                            </span>
+                            <span *ngIf="complaint.status==='In-Progress'" [ngStyle]="{color: 'blue'}">
+                                {{complaint.status}}
+                            </span>
+                            <span *ngIf="complaint.status==='Rejected'" [ngStyle]="{color: 'red'}">
+                                {{complaint.status}}
+                            </span>
+                            <span *ngIf="complaint.status==='Resolved'" [ngStyle]="{color: 'green'}">
+                                {{complaint.status}}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+<h3 class="stats">Recent Joined Students</h3>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="100">
+        <div class="mat-elevation-z8">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="background-color: rgb(13, 13, 65); color:#fff">
+                        <th scope="col">Sr. No.</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of students;let i = index;">
+                        <td>{{i+1}}</td>
+                        <td>{{student.fullname}}</td>
+                        <td>{{student.email}}</td>
+                        <td>{{student.homeAdress}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+
+<h3 class="stats">Recent Joined Drivers</h3>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="100">
+        <div class="mat-elevation-z8">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="background-color: rgb(13, 13, 65); color:#fff">
+                        <th scope="col">Sr. No.</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let driver of drivers;let i = index;">
+                        <td>{{i+1}}</td>
+                        <td>{{driver.fullname}}</td>
+                        <td>{{driver.email}}</td>
+                        <td>{{driver.address}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>

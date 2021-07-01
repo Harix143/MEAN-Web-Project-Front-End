@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light" style=" background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/schdule">My Schedule</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">New</a>
+                </li>
+            </ul> -->
+            <form class="d-flex">
+
+                <button class="btn btn-success" type="submit" (click)="newSchedule($event)">Add new
+                    Schedule</button>
+
+            </form>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<form (ngSubmit)="viewSchdule()">
+    <div class="mb-3">
+        <label for="ID" class="form-label">ID</label>
+        <input type="text" class="form-control" name="_id" [(ngModel)]="_id" disabled>
+    </div>
+    <div class="mb-3">
+        <label for="schoolStartingTime" class="form-label">Starting Time</label>
+        <input type="datetime-local" class="form-control" name="schoolStartingTime"
+            [(ngModel)]='schedules.schoolStartingTime' readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="schoolClosingTime" class="form-label">Closing Time</label>
+        <input type="datetime-local" class="form-control" name="schoolClosingTime"
+            [(ngModel)]='schedules.schoolClosingTime' readonly>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary btn-lg">Done</button>
+</form>

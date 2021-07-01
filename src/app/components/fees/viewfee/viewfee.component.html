@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light" style=" background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/admin/routes">Fees</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">New</a>
+                </li>
+            </ul> -->
+            <form class="d-flex">
+                <button class="btn btn-success" type="submit" (click)="newFee($event)">Add New Challan</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<form (ngSubmit)="viewFees()">
+    <div class="mb-3">
+        <label for="ID" class="form-label">ID</label>
+        <input type="text" class="form-control" name="_id" [(ngModel)]="fees._id" disabled>
+    </div>
+    <div class="mb-3">
+        <label for="dueAmount" class="form-label">Due Amount</label>
+        <input type="text" class="form-control" name="dueAmount" [(ngModel)]='fees.dueAmount' readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="dueDate" class="form-label">Due Date</label>
+        <input type="text" class="form-control" name="dueDate" [(ngModel)]='fees.dueDate' readonly>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg">Done</button>
+</form>

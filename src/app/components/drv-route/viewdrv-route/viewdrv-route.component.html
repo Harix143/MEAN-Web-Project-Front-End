@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light" style=" background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="driver/route">My Route</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<form *ngIf="!serverErrorMessages">
+
+    <div class="mb-3">
+        <label for="routeName" class="form-label">Route Name</label>
+        <input type="text" class="form-control" name="routeName" [(ngModel)]='route.name' readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="routeDescription" class="form-label">Route Description</label>
+        <input type="text" class="form-control" name="routeDescription" [(ngModel)]='route.description' readonly>
+    </div>
+</form>
+
+<!-- Error message -->
+<div class="alert alert-danger" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+</div>

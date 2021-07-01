@@ -1,0 +1,45 @@
+<p>view-assigned-std works!</p>
+<nav class="navbar navbar-expand-lg navbar-light" style=" background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/driver/dashboard/">Assigned Students</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" *ngIf="!serverErrorMessages">
+    <div fxFlex="100">
+        <div class="mat-elevation-z8">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="background-color: rgb(13, 13, 65); color:#fff">
+                        <th scope="col">Sr. No.</th>
+                        <th scope="col">Student Name</th>
+                        <th scope="col">Home Address</th>
+                        <th scope="col">School Address</th>
+                        <th scope="col">Phone No.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of students;let i = index;">
+                        <td>{{i+1}}</td>
+                        <td>{{student.fullname}}</td>
+                        <td>{{student.homeAdress}}</td>
+                        <td>{{student.schoolAdress}}</td>
+                        <td>{{student.phone_no}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Error message -->
+<div class="alert alert-danger" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+</div>
